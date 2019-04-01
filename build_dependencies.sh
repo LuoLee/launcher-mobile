@@ -15,21 +15,29 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 set -e
 
-# Source files
+# Source files for qemu
 FFI_SRC="https://sourceware.org/ftp/libffi/libffi-3.2.1.tar.gz"
 ICONV_SRC="https://ftp.gnu.org/gnu/libiconv/libiconv-1.15.tar.gz"
 GETTEXT_SRC="https://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.gz"
+PNG_SRC="https://ftp.osuosl.org/pub/blfs/conglomeration/libpng/libpng-1.6.36.tar.xz"
+JPEG_TURBO_SRC="https://ftp.osuosl.org/pub/blfs/conglomeration/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz"
 GLIB_SRC="ftp://ftp.gnome.org/pub/GNOME/sources/glib/2.55/glib-2.55.2.tar.xz"
 GPG_ERROR_SRC="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.36.tar.gz"
 GCRYPT_SRC="https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.4.tar.gz"
 PIXMAN_SRC="https://www.cairographics.org/releases/pixman-0.38.0.tar.gz"
 OPENSSL_SRC="https://www.openssl.org/source/openssl-1.1.1b.tar.gz"
-JPEG_SRC="https://www.ijg.org/files/jpegsrc.v9c.tar.gz"
-JPEG_NAME="jpeg-9c" # the extracted directory doesn't use the tar name
 OPUS_SRC="https://archive.mozilla.org/pub/opus/opus-1.3.tar.gz"
 SPICE_PROTOCOL_SRC="https://www.spice-space.org/download/releases/spice-protocol-0.12.15.tar.bz2"
 SPICE_SERVER_SRC="https://www.spice-space.org/download/releases/spice-server/spice-0.14.1.tar.bz2"
 QEMU_GIT="https://github.com/halts/qemu.git"
+
+# Source files for spice-client
+JSON_GLIB_SRC="https://ftp.gnome.org/pub/GNOME/sources/json-glib/1.2/json-glib-1.2.8.tar.xz"
+GST_SRC="https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.15.2.tar.xz"
+GST_BASE_SRC="https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.15.2.tar.xz"
+GST_GOOD_SRC="https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.15.2.tar.xz"
+SPICE_CLIENT_SRC="https://www.spice-space.org/download/gtk/spice-gtk-0.36.tar.bz2"
+SPICEGLUE_SRC="https://github.com/halts/spiceglue/releases/download/v2.2/spiceglue-2.2.tar.gz"
 
 # Directories
 BUILD_DIR="build"
@@ -68,6 +76,7 @@ usage () {
 }
 
 check_env () {
+    command -v msgfmt >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'pkg-config' on your host machine.${NC}"; exit 1; }
     command -v msgfmt >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'gettext' on your host machine.\n\t'msgfmt' needs to be in your \$PATH as well.${NC}"; exit 1; }
     command -v xcrun >/dev/null 2>&1 || { echo >&2 "${RED}'xcrun' is not found. Make sure you are running on OSX."; exit 1; }
     command -v otool >/dev/null 2>&1 || { echo >&2 "${RED}'otool' is not found. Make sure you are running on OSX."; exit 1; }
@@ -101,15 +110,22 @@ download_all () {
     download $FFI_SRC
     download $ICONV_SRC
     download $GETTEXT_SRC
+    download $PNG_SRC
+    download $JPEG_TURBO_SRC
     download $GLIB_SRC
     download $GPG_ERROR_SRC
     download $GCRYPT_SRC
     download $PIXMAN_SRC
     download $OPENSSL_SRC
-    download $JPEG_SRC
     download $OPUS_SRC
     download $SPICE_PROTOCOL_SRC
     download $SPICE_SERVER_SRC
+    download $JSON_GLIB_SRC
+    download $GST_SRC
+    download $GST_BASE_SRC
+    download $GST_GOOD_SRC
+    download $SPICE_CLIENT_SRC
+    download $SPICEGLUE_SRC
 }
 
 build_openssl() {
@@ -164,23 +180,23 @@ build () {
     echo "${GREEN}Configuring ${NAME}...${NC}"
     ./configure --prefix="$PREFIX" --host="$CHOST" $@
     echo "${GREEN}Building ${NAME}...${NC}"
-    which gcc
     make
     echo "${GREEN}Installing ${NAME}...${NC}"
     make install
     cd "$pwd"
 }
 
-build_all () {
+build_qemu_dependencies () {
     build $FFI_SRC
     build $ICONV_SRC
     build $GETTEXT_SRC
+    build $PNG_NAME
+    build $JPEG_TURBO_SRC
     build $GLIB_SRC glib_cv_stack_grows=no glib_cv_uscore=no --with-pcre=internal
     build $GPG_ERROR_SRC
     build $GCRYPT_SRC
     build $PIXMAN_SRC
     build_openssl $OPENSSL_SRC
-    build $JPEG_NAME
     build $OPUS_SRC
     build $SPICE_PROTOCOL_SRC
     build $SPICE_SERVER_SRC
@@ -205,6 +221,21 @@ build_qemu () {
     CFLAGS="$QEMU_CFLAGS"
     CXXFLAGS="$QEMU_CXXFLAGS"
     LDFLAGS="$QEMU_LDFLAGS"
+}
+
+steal_libucontext () {
+    # HACK: use the libucontext built by qemu
+    cp "$BUILD_DIR/qemu/libucontext/libucontext.a" "$PREFIX/lib/libucontext.a"
+    cp "$BUILD_DIR/qemu/libucontext/include/libucontext.h" "$PREFIX/include/libucontext.h"
+}
+
+build_spice_client () {
+    build $JSON_GLIB_SRC
+    build $GST_SRC
+    build $GST_BASE_SRC
+    build $GST_GOOD_SRC
+    build $SPICE_CLIENT_SRC --with-gtk=no
+    build $SPICEGLUE_SRC --disable-printing --disable-usbredir --disable-clipboard
 }
 
 fixup () {
@@ -313,7 +344,9 @@ export PKG_CONFIG_LIBDIR
 
 check_env
 download_all
-build_all
+build_qemu_dependencies
 build_qemu
+steal_libucontext # should be a better way...
+build_spice_client
 fixup_all
 echo "${GREEN}All done!${NC}"
