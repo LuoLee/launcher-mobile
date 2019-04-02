@@ -20,7 +20,7 @@ FFI_SRC="https://sourceware.org/ftp/libffi/libffi-3.2.1.tar.gz"
 ICONV_SRC="https://ftp.gnu.org/gnu/libiconv/libiconv-1.15.tar.gz"
 GETTEXT_SRC="https://ftp.gnu.org/gnu/gettext/gettext-0.19.8.1.tar.gz"
 PNG_SRC="https://ftp.osuosl.org/pub/blfs/conglomeration/libpng/libpng-1.6.36.tar.xz"
-JPEG_TURBO_SRC="https://ftp.osuosl.org/pub/blfs/conglomeration/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz"
+JPEG_TURBO_SRC="https://ftp.osuosl.org/pub/blfs/conglomeration/libjpeg-turbo/libjpeg-turbo-1.5.3.tar.gz"
 GLIB_SRC="ftp://ftp.gnome.org/pub/GNOME/sources/glib/2.55/glib-2.55.2.tar.xz"
 GPG_ERROR_SRC="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.36.tar.gz"
 GCRYPT_SRC="https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.4.tar.gz"
@@ -76,11 +76,13 @@ usage () {
 }
 
 check_env () {
-    command -v msgfmt >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'pkg-config' on your host machine.${NC}"; exit 1; }
+    command -v pkg-config >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'pkg-config' on your host machine.${NC}"; exit 1; }
     command -v msgfmt >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'gettext' on your host machine.\n\t'msgfmt' needs to be in your \$PATH as well.${NC}"; exit 1; }
+    command -v glib-mkenums >/dev/null 2>&1 || { echo >&2 "${RED}You must install 'glib' on your host machine.\n\t'glib-mkenums' needs to be in your \$PATH as well.${NC}"; exit 1; }
     command -v xcrun >/dev/null 2>&1 || { echo >&2 "${RED}'xcrun' is not found. Make sure you are running on OSX."; exit 1; }
     command -v otool >/dev/null 2>&1 || { echo >&2 "${RED}'otool' is not found. Make sure you are running on OSX."; exit 1; }
     command -v install_name_tool >/dev/null 2>&1 || { echo >&2 "${RED}'install_name_tool' is not found. Make sure you are running on OSX."; exit 1; }
+    # TODO: check bison version >= 2.4
 }
 
 download () {
@@ -94,7 +96,7 @@ download () {
         echo "${GREEN}$TARGET already downloaded! Delete it to re-download.${NC}"
     else
         echo "${GREEN}Downloading ${URL}...${NC}"
-        curl -O "$URL"
+        curl -L -O "$URL"
         mv "$FILE" "$TARGET"
     fi
     echo "${GREEN}Unpacking ${NAME}...${NC}"
@@ -190,7 +192,7 @@ build_qemu_dependencies () {
     build $FFI_SRC
     build $ICONV_SRC
     build $GETTEXT_SRC
-    build $PNG_NAME
+    build $PNG_SRC
     build $JPEG_TURBO_SRC
     build $GLIB_SRC glib_cv_stack_grows=no glib_cv_uscore=no --with-pcre=internal
     build $GPG_ERROR_SRC
@@ -217,7 +219,7 @@ build_qemu () {
     CFLAGS=
     CXXFLAGS=
     LDFLAGS=
-    build qemu --enable-shared-lib --target-list=x86_64-softmmu
+    build qemu --enable-shared-lib
     CFLAGS="$QEMU_CFLAGS"
     CXXFLAGS="$QEMU_CXXFLAGS"
     LDFLAGS="$QEMU_LDFLAGS"
@@ -232,7 +234,7 @@ steal_libucontext () {
 build_spice_client () {
     build $JSON_GLIB_SRC
     build $GST_SRC
-    build $GST_BASE_SRC
+    build $GST_BASE_SRC --disable-fatal-warnings
     build $GST_GOOD_SRC
     build $SPICE_CLIENT_SRC --with-gtk=no
     build $SPICEGLUE_SRC --disable-printing --disable-usbredir --disable-clipboard
