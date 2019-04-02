@@ -53,6 +53,7 @@ NC='\033[0m'
 ARCH=$1
 CHOST=
 SDK=
+NCPU=$(sysctl -n hw.ncpu)
 
 command -v realpath >/dev/null 2>&1 || realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
@@ -164,9 +165,9 @@ build_openssl() {
     echo "${GREEN}Configuring ${NAME}...${NC}"
     ./Configure $OPENSSL_CROSS no-dso no-hw no-engine --prefix="$PREFIX" $@
     echo "${GREEN}Building ${NAME}...${NC}"
-    make
+    make "$MAKEFLAGS"
     echo "${GREEN}Installing ${NAME}...${NC}"
-    make install
+    make "$MAKEFLAGS" install
     cd "$pwd"
 }
 
@@ -182,9 +183,9 @@ build () {
     echo "${GREEN}Configuring ${NAME}...${NC}"
     ./configure --prefix="$PREFIX" --host="$CHOST" $@
     echo "${GREEN}Building ${NAME}...${NC}"
-    make
+    make "$MAKEFLAGS"
     echo "${GREEN}Installing ${NAME}...${NC}"
-    make install
+    make "$MAKEFLAGS" install
     cd "$pwd"
 }
 
@@ -233,7 +234,7 @@ steal_libucontext () {
 
 build_spice_client () {
     build $JSON_GLIB_SRC
-    build $GST_SRC
+    build $GST_SRC --enable-static-plugins --disable-registry
     build $GST_BASE_SRC --disable-fatal-warnings
     build $GST_GOOD_SRC
     build $SPICE_CLIENT_SRC --with-gtk=no
@@ -335,12 +336,14 @@ CFLAGS="$CFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-vers
 CPPFLAGS="$CPPFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-version-min=$SDKVERSION"
 CXXFLAGS="$CXXFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include"
 LDFLAGS="$LDFLAGS -arch $ARCH -isysroot $SDKROOT -L$PREFIX/lib"
+MAKEFLAGS="-j$NCPU"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH":"$SDKROOT/usr/lib/pkgconfig":"$PREFIX/lib/pkgconfig":"$PREFIX/share/pkgconfig"
 PKG_CONFIG_LIBDIR=""
 export CFLAGS
 export CPPFLAGS
 export CXXFLAGS
 export LDFLAGS
+export MAKEFLAGS
 export PKG_CONFIG_PATH
 export PKG_CONFIG_LIBDIR
 
