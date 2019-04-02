@@ -1,0 +1,14 @@
+diff -aur a/src/glue-connection.c b/src/glue-connection.c
+--- a/src/glue-connection.c   2018-11-07 06:48:38.000000000 -0800
++++ b/src/glue-connection.c   2019-04-01 18:59:10.000000000 -0700
+@@ -245,6 +245,6 @@
+ 
+ void spice_connection_power_event_request(SpiceConnection *conn, int powerEvent)
+ {
+-    if (conn->main != NULL)
+-        spice_main_power_event_request(conn->main, powerEvent);
+-}
+\ No newline at end of file
++    //if (conn->main != NULL)
++    //    spice_main_power_event_request(conn->main, powerEvent);
++}
