@@ -28,7 +28,7 @@ G_PASTE(g_io_module_, G_PASTE(name, _load_static)) ()
 //#define GST_IOS_PLUGINS_CODECS
 //#define GST_IOS_PLUGINS_NET
 //#define GST_IOS_PLUGINS_EDITING
-
+#define GST_IOS_PLUGIN_JPEG
 
 //#define GST_IOS_GIO_MODULE_GNUTLS
 

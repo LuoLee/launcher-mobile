@@ -53,6 +53,7 @@ NC='\033[0m'
 ARCH=$1
 CHOST=
 SDK=
+SDKMINVER="8.0"
 NCPU=$(sysctl -n hw.ncpu)
 
 command -v realpath >/dev/null 2>&1 || realpath() {
@@ -234,9 +235,9 @@ steal_libucontext () {
 
 build_spice_client () {
     build $JSON_GLIB_SRC
-    build $GST_SRC --enable-static-plugins --disable-registry
-    build $GST_BASE_SRC --disable-fatal-warnings
-    build $GST_GOOD_SRC
+    build $GST_SRC --enable-static --enable-static-plugins --disable-registry
+    build $GST_BASE_SRC --enable-static --disable-fatal-warnings
+    build $GST_GOOD_SRC --enable-static
     build $SPICE_CLIENT_SRC --with-gtk=no
     build $SPICEGLUE_SRC --disable-printing --disable-usbredir --disable-clipboard
 }
@@ -270,6 +271,10 @@ fixup_all () {
         fixup $f
     done
     IFS=$OLDIFS
+}
+
+remove_shared_gst_plugins () {
+    find "$SYSROOT_DIR/lib/gstreamer-1.0" \( -name '*.so' -or -name '*.la' \) -exec rm \{\} \;
 }
 
 if [ "x$ARCH" == "x" ]; then
@@ -320,6 +325,10 @@ else
     SDKROOT=$(xcrun --sdk $SDK --show-sdk-path) # current version
 fi
 
+if [ -z "$SDKMINVER" ]; then
+    SDKMINVER="$SDKVERSION"
+fi
+
 # Export tools
 CC=$(xcrun --sdk $SDK --find gcc)
 CPP=$(xcrun --sdk $SDK --find gcc)" -E"
@@ -332,8 +341,8 @@ export LD
 export PREFIX
 
 # Flags
-CFLAGS="$CFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-version-min=$SDKVERSION"
-CPPFLAGS="$CPPFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-version-min=$SDKVERSION"
+CFLAGS="$CFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-version-min=$SDKMINVER"
+CPPFLAGS="$CPPFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include -miphoneos-version-min=$SDKMINVER"
 CXXFLAGS="$CXXFLAGS -arch $ARCH -isysroot $SDKROOT -I$PREFIX/include"
 LDFLAGS="$LDFLAGS -arch $ARCH -isysroot $SDKROOT -L$PREFIX/lib"
 MAKEFLAGS="-j$NCPU"
@@ -354,4 +363,5 @@ build_qemu
 steal_libucontext # should be a better way...
 build_spice_client
 fixup_all
+remove_shared_gst_plugins # another hack...
 echo "${GREEN}All done!${NC}"

@@ -1,0 +1,939 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE1A4AD01A0D1399002983C2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1A4ACF1A0D1399002983C2 /* Reachability.m */; };
+		BE3013461BD67BE900EE5B7D /* gst_ios_init.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3013451BD67BE900EE5B7D /* gst_ios_init.m */; };
+		BE3013561BD7873700EE5B7D /* flexvdi_ios_central2.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3013551BD7873700EE5B7D /* flexvdi_ios_central2.png */; };
+		BE3013581BD7907C00EE5B7D /* flexvdi_config_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3013571BD7907C00EE5B7D /* flexvdi_config_logo.png */; };
+		BE588B161A24EE4000ACED16 /* beep-timber.aif in Resources */ = {isa = PBXBuildFile; fileRef = BE588B151A24EE4000ACED16 /* beep-timber.aif */; };
+		BE5D39441A1233A7008C2094 /* config_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5D39411A1233A7008C2094 /* config_icon.png */; };
+		BE5D39451A1233A7008C2094 /* flexvdi_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5D39421A1233A7008C2094 /* flexvdi_icon.png */; };
+		BE5D394D1A1255D2008C2094 /* barra_sup.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5D394C1A1255D2008C2094 /* barra_sup.png */; };
+		BE64382E1CBD096800742F1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE6438301CBD096800742F1B /* Localizable.strings */; };
+		BEA2334C1A0CC575007978B5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2334B1A0CC575007978B5 /* MainViewController.m */; };
+		BEA2F8611A0BB94B00C2D8BF /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2F8601A0BB94B00C2D8BF /* LoginController.m */; };
+		BEA2F8641A0BBB2600C2D8BF /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2F8631A0BBB2600C2D8BF /* Toast+UIView.m */; };
+		BEA2F8681A0BBBF800C2D8BF /* DesktopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2F8661A0BBBF800C2D8BF /* DesktopTableViewCell.m */; };
+		BEA2F8EC1A0BCC9F00C2D8BF /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2F8EB1A0BCC9F00C2D8BF /* ConfigViewController.m */; };
+		BEAF3EC81A0A488F0056C6A8 /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAF3EC71A0A488F0056C6A8 /* keyboard.png */; };
+		BEAF3ECB1A0A6BB00056C6A8 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAF3ECA1A0A6BB00056C6A8 /* KeyboardView.m */; };
+		BEE6190B1A13696800448F71 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE619091A13696800448F71 /* Main_iPad.storyboard */; };
+		BEFD10BA1BD7C9B000223664 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3013511BD680FA00EE5B7D /* VideoToolbox.framework */; };
+		BEFD10BB1BD7C9BD00223664 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3013471BD6807000EE5B7D /* CoreMedia.framework */; };
+		BEFD10BC1BD7C9D500223664 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3013491BD680A000EE5B7D /* AVFoundation.framework */; };
+		BEFD10BD1BD7C9E100223664 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFD10B81BD7A9F700223664 /* AssetsLibrary.framework */; };
+		CE92084C2253E17F00F3880D /* libgstcoreelements.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208392253E17E00F3880D /* libgstcoreelements.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		CE92084D2253E17F00F3880D /* libgstosxaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083A2253E17E00F3880D /* libgstosxaudio.a */; };
+		CE92084E2253E17F00F3880D /* libgstvideoconvert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083B2253E17E00F3880D /* libgstvideoconvert.a */; };
+		CE92084F2253E17F00F3880D /* libgstvideorate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083C2253E17E00F3880D /* libgstvideorate.a */; };
+		CE9208502253E17F00F3880D /* libgstvideoscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083D2253E17E00F3880D /* libgstvideoscale.a */; };
+		CE9208512253E17F00F3880D /* libgstvideofilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083E2253E17E00F3880D /* libgstvideofilter.a */; };
+		CE9208522253E17F00F3880D /* libgsttypefindfunctions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92083F2253E17E00F3880D /* libgsttypefindfunctions.a */; };
+		CE9208532253E17F00F3880D /* libgstaudiotestsrc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208402253E17E00F3880D /* libgstaudiotestsrc.a */; };
+		CE9208542253E17F00F3880D /* libgstopengl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208412253E17E00F3880D /* libgstopengl.a */; };
+		CE9208552253E17F00F3880D /* libgstapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208422253E17F00F3880D /* libgstapp.a */; };
+		CE9208562253E17F00F3880D /* libgstaudiorate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208432253E17F00F3880D /* libgstaudiorate.a */; };
+		CE9208572253E17F00F3880D /* libgstvideotestsrc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208442253E17F00F3880D /* libgstvideotestsrc.a */; };
+		CE9208582253E17F00F3880D /* libgstautodetect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208452253E17F00F3880D /* libgstautodetect.a */; };
+		CE9208592253E17F00F3880D /* libgstvolume.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208462253E17F00F3880D /* libgstvolume.a */; };
+		CE92085A2253E17F00F3880D /* libgstaudioresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208472253E17F00F3880D /* libgstaudioresample.a */; };
+		CE92085B2253E17F00F3880D /* libgstplayback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208482253E17F00F3880D /* libgstplayback.a */; };
+		CE92085C2253E17F00F3880D /* libgstaudioconvert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9208492253E17F00F3880D /* libgstaudioconvert.a */; };
+		CE92085D2253E17F00F3880D /* libgstadder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92084A2253E17F00F3880D /* libgstadder.a */; };
+		CE92085E2253E17F00F3880D /* libgstgio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92084B2253E17F00F3880D /* libgstgio.a */; };
+		CE9208602253EFA400F3880D /* libgstjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE92085F2253EFA400F3880D /* libgstjpeg.a */; };
+		CEDA3A132253D98800C66A1B /* libturbojpeg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39ED2253D98600C66A1B /* libturbojpeg.0.dylib */; };
+		CEDA3A142253D98800C66A1B /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39EE2253D98600C66A1B /* libpng16.16.dylib */; };
+		CEDA3A152253D98800C66A1B /* libgcrypt.20.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39EF2253D98600C66A1B /* libgcrypt.20.dylib */; };
+		CEDA3A162253D98800C66A1B /* libgstrtp-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F02253D98600C66A1B /* libgstrtp-1.0.0.dylib */; };
+		CEDA3A172253D98800C66A1B /* libgio-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F12253D98600C66A1B /* libgio-2.0.0.dylib */; };
+		CEDA3A182253D98800C66A1B /* libgthread-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F22253D98600C66A1B /* libgthread-2.0.0.dylib */; };
+		CEDA3A192253D98800C66A1B /* libintl.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F32253D98600C66A1B /* libintl.8.dylib */; };
+		CEDA3A1A2253D98800C66A1B /* libgstvideo-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F42253D98600C66A1B /* libgstvideo-1.0.0.dylib */; };
+		CEDA3A1B2253D98800C66A1B /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F52253D98600C66A1B /* libssl.1.1.dylib */; };
+		CEDA3A1C2253D98800C66A1B /* libglib-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F62253D98600C66A1B /* libglib-2.0.0.dylib */; };
+		CEDA3A1D2253D98800C66A1B /* libopus.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F72253D98600C66A1B /* libopus.0.dylib */; };
+		CEDA3A1E2253D98800C66A1B /* libgpg-error.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F82253D98600C66A1B /* libgpg-error.0.dylib */; };
+		CEDA3A1F2253D98800C66A1B /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39F92253D98600C66A1B /* libcrypto.1.1.dylib */; };
+		CEDA3A202253D98800C66A1B /* libgstpbutils-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FA2253D98700C66A1B /* libgstpbutils-1.0.0.dylib */; };
+		CEDA3A212253D98800C66A1B /* libspice-server.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FB2253D98700C66A1B /* libspice-server.1.dylib */; };
+		CEDA3A222253D98800C66A1B /* libgstapp-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FC2253D98700C66A1B /* libgstapp-1.0.0.dylib */; };
+		CEDA3A232253D98800C66A1B /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FD2253D98700C66A1B /* libiconv.2.dylib */; };
+		CEDA3A242253D98800C66A1B /* libspiceglue.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FE2253D98700C66A1B /* libspiceglue.0.dylib */; };
+		CEDA3A252253D98800C66A1B /* libgstgl-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA39FF2253D98700C66A1B /* libgstgl-1.0.0.dylib */; };
+		CEDA3A262253D98800C66A1B /* libffi.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A002253D98700C66A1B /* libffi.6.dylib */; };
+		CEDA3A272253D98800C66A1B /* libgstrtsp-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A012253D98700C66A1B /* libgstrtsp-1.0.0.dylib */; };
+		CEDA3A282253D98800C66A1B /* libgstbase-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A022253D98700C66A1B /* libgstbase-1.0.0.dylib */; };
+		CEDA3A292253D98800C66A1B /* libjson-glib-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A032253D98700C66A1B /* libjson-glib-1.0.0.dylib */; };
+		CEDA3A2A2253D98800C66A1B /* libgstcheck-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A042253D98700C66A1B /* libgstcheck-1.0.0.dylib */; };
+		CEDA3A2B2253D98800C66A1B /* libgsttag-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A052253D98700C66A1B /* libgsttag-1.0.0.dylib */; };
+		CEDA3A2C2253D98800C66A1B /* libgstriff-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A062253D98700C66A1B /* libgstriff-1.0.0.dylib */; };
+		CEDA3A2D2253D98800C66A1B /* libgobject-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A072253D98700C66A1B /* libgobject-2.0.0.dylib */; };
+		CEDA3A2E2253D98800C66A1B /* libgstcontroller-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A082253D98700C66A1B /* libgstcontroller-1.0.0.dylib */; };
+		CEDA3A2F2253D98800C66A1B /* libpixman-1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A092253D98700C66A1B /* libpixman-1.0.dylib */; };
+		CEDA3A302253D98800C66A1B /* libjpeg.62.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0A2253D98700C66A1B /* libjpeg.62.dylib */; };
+		CEDA3A312253D98800C66A1B /* libgstsdp-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0B2253D98700C66A1B /* libgstsdp-1.0.0.dylib */; };
+		CEDA3A322253D98800C66A1B /* libgstfft-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0C2253D98700C66A1B /* libgstfft-1.0.0.dylib */; };
+		CEDA3A332253D98800C66A1B /* libgstaudio-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0D2253D98700C66A1B /* libgstaudio-1.0.0.dylib */; };
+		CEDA3A342253D98800C66A1B /* libgstnet-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0E2253D98700C66A1B /* libgstnet-1.0.0.dylib */; };
+		CEDA3A352253D98800C66A1B /* libgmodule-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A0F2253D98700C66A1B /* libgmodule-2.0.0.dylib */; };
+		CEDA3A362253D98800C66A1B /* libgstreamer-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A102253D98700C66A1B /* libgstreamer-1.0.0.dylib */; };
+		CEDA3A372253D98800C66A1B /* libgstallocators-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A112253D98700C66A1B /* libgstallocators-1.0.0.dylib */; };
+		CEDA3A382253D98800C66A1B /* libspice-client-glib-2.0.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA3A122253D98800C66A1B /* libspice-client-glib-2.0.8.dylib */; };
+		CEDA3A3C2253DD3B00C66A1B /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F92253D98600C66A1B /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A3D2253DD3B00C66A1B /* libffi.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A002253D98700C66A1B /* libffi.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A3E2253DD3B00C66A1B /* libgcrypt.20.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39EF2253D98600C66A1B /* libgcrypt.20.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A3F2253DD3B00C66A1B /* libgio-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F12253D98600C66A1B /* libgio-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A402253DD3B00C66A1B /* libglib-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F62253D98600C66A1B /* libglib-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A412253DD3B00C66A1B /* libgmodule-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0F2253D98700C66A1B /* libgmodule-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A422253DD3B00C66A1B /* libgobject-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A072253D98700C66A1B /* libgobject-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A432253DD3B00C66A1B /* libgpg-error.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F82253D98600C66A1B /* libgpg-error.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A442253DD3B00C66A1B /* libgstallocators-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A112253D98700C66A1B /* libgstallocators-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A452253DD3B00C66A1B /* libgstapp-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FC2253D98700C66A1B /* libgstapp-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A462253DD3B00C66A1B /* libgstaudio-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0D2253D98700C66A1B /* libgstaudio-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A472253DD3B00C66A1B /* libgstbase-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A022253D98700C66A1B /* libgstbase-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A482253DD3B00C66A1B /* libgstcheck-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A042253D98700C66A1B /* libgstcheck-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A492253DD3B00C66A1B /* libgstcontroller-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A082253D98700C66A1B /* libgstcontroller-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4A2253DD3B00C66A1B /* libgstfft-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0C2253D98700C66A1B /* libgstfft-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4B2253DD3B00C66A1B /* libgstgl-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FF2253D98700C66A1B /* libgstgl-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4C2253DD3B00C66A1B /* libgstnet-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0E2253D98700C66A1B /* libgstnet-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4D2253DD3B00C66A1B /* libgstpbutils-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FA2253D98700C66A1B /* libgstpbutils-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4E2253DD3B00C66A1B /* libgstreamer-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A102253D98700C66A1B /* libgstreamer-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A4F2253DD3B00C66A1B /* libgstriff-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A062253D98700C66A1B /* libgstriff-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A502253DD3B00C66A1B /* libgstrtp-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F02253D98600C66A1B /* libgstrtp-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A512253DD3B00C66A1B /* libgstrtsp-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A012253D98700C66A1B /* libgstrtsp-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A522253DD3B00C66A1B /* libgstsdp-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0B2253D98700C66A1B /* libgstsdp-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A532253DD3B00C66A1B /* libgsttag-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A052253D98700C66A1B /* libgsttag-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A542253DD3B00C66A1B /* libgstvideo-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F42253D98600C66A1B /* libgstvideo-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A552253DD3B00C66A1B /* libgthread-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F22253D98600C66A1B /* libgthread-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A562253DD3B00C66A1B /* libiconv.2.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FD2253D98700C66A1B /* libiconv.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A572253DD3B00C66A1B /* libintl.8.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F32253D98600C66A1B /* libintl.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A582253DD3B00C66A1B /* libjpeg.62.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A0A2253D98700C66A1B /* libjpeg.62.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A592253DD3B00C66A1B /* libjson-glib-1.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A032253D98700C66A1B /* libjson-glib-1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5A2253DD3B00C66A1B /* libopus.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F72253D98600C66A1B /* libopus.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5B2253DD3B00C66A1B /* libpixman-1.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A092253D98700C66A1B /* libpixman-1.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5C2253DD3B00C66A1B /* libpng16.16.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39EE2253D98600C66A1B /* libpng16.16.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5D2253DD3B00C66A1B /* libspice-client-glib-2.0.8.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA3A122253D98800C66A1B /* libspice-client-glib-2.0.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5E2253DD3B00C66A1B /* libspice-server.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FB2253D98700C66A1B /* libspice-server.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A5F2253DD3B00C66A1B /* libspiceglue.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39FE2253D98700C66A1B /* libspiceglue.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A602253DD3B00C66A1B /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39F52253D98600C66A1B /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEDA3A612253DD3B00C66A1B /* libturbojpeg.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = CEDA39ED2253D98600C66A1B /* libturbojpeg.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D8985D0A1A03D82200B240FF /* ES1Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8985D091A03D82200B240FF /* ES1Renderer.m */; };
+		D8FD56311A03A77A00292158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FD56301A03A77A00292158 /* Foundation.framework */; };
+		D8FD56331A03A77A00292158 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FD56321A03A77A00292158 /* CoreGraphics.framework */; };
+		D8FD56351A03A77A00292158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FD56341A03A77A00292158 /* UIKit.framework */; };
+		D8FD56371A03A77A00292158 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FD56361A03A77A00292158 /* GLKit.framework */; };
+		D8FD56391A03A77A00292158 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FD56381A03A77A00292158 /* OpenGLES.framework */; };
+		D8FD563F1A03A77A00292158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8FD563D1A03A77A00292158 /* InfoPlist.strings */; };
+		D8FD56411A03A77A00292158 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56401A03A77A00292158 /* main.m */; };
+		D8FD56451A03A77A00292158 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56441A03A77A00292158 /* AppDelegate.m */; };
+		D8FD56481A03A77A00292158 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FD56461A03A77A00292158 /* Main_iPhone.storyboard */; };
+		D8FD56521A03A77A00292158 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56511A03A77A00292158 /* MainView.m */; };
+		D8FD56541A03A77A00292158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FD56531A03A77A00292158 /* Images.xcassets */; };
+		D8FD567A1A03A8BD00292158 /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56721A03A8BD00292158 /* draw.c */; };
+		D8FD567B1A03A8BD00292158 /* io_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56751A03A8BD00292158 /* io_interface.c */; };
+		D8FD567C1A03A8BD00292158 /* spice.c in Sources */ = {isa = PBXBuildFile; fileRef = D8FD56781A03A8BD00292158 /* spice.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEDA3A622253DD3B00C66A1B /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEDA3A432253DD3B00C66A1B /* libgpg-error.0.dylib in Embed Libraries */,
+				CEDA3A492253DD3B00C66A1B /* libgstcontroller-1.0.0.dylib in Embed Libraries */,
+				CEDA3A442253DD3B00C66A1B /* libgstallocators-1.0.0.dylib in Embed Libraries */,
+				CEDA3A472253DD3B00C66A1B /* libgstbase-1.0.0.dylib in Embed Libraries */,
+				CEDA3A3D2253DD3B00C66A1B /* libffi.6.dylib in Embed Libraries */,
+				CEDA3A5E2253DD3B00C66A1B /* libspice-server.1.dylib in Embed Libraries */,
+				CEDA3A3F2253DD3B00C66A1B /* libgio-2.0.0.dylib in Embed Libraries */,
+				CEDA3A5C2253DD3B00C66A1B /* libpng16.16.dylib in Embed Libraries */,
+				CEDA3A4C2253DD3B00C66A1B /* libgstnet-1.0.0.dylib in Embed Libraries */,
+				CEDA3A3C2253DD3B00C66A1B /* libcrypto.1.1.dylib in Embed Libraries */,
+				CEDA3A452253DD3B00C66A1B /* libgstapp-1.0.0.dylib in Embed Libraries */,
+				CEDA3A602253DD3B00C66A1B /* libssl.1.1.dylib in Embed Libraries */,
+				CEDA3A4B2253DD3B00C66A1B /* libgstgl-1.0.0.dylib in Embed Libraries */,
+				CEDA3A532253DD3B00C66A1B /* libgsttag-1.0.0.dylib in Embed Libraries */,
+				CEDA3A5D2253DD3B00C66A1B /* libspice-client-glib-2.0.8.dylib in Embed Libraries */,
+				CEDA3A502253DD3B00C66A1B /* libgstrtp-1.0.0.dylib in Embed Libraries */,
+				CEDA3A4F2253DD3B00C66A1B /* libgstriff-1.0.0.dylib in Embed Libraries */,
+				CEDA3A552253DD3B00C66A1B /* libgthread-2.0.0.dylib in Embed Libraries */,
+				CEDA3A422253DD3B00C66A1B /* libgobject-2.0.0.dylib in Embed Libraries */,
+				CEDA3A412253DD3B00C66A1B /* libgmodule-2.0.0.dylib in Embed Libraries */,
+				CEDA3A402253DD3B00C66A1B /* libglib-2.0.0.dylib in Embed Libraries */,
+				CEDA3A5F2253DD3B00C66A1B /* libspiceglue.0.dylib in Embed Libraries */,
+				CEDA3A572253DD3B00C66A1B /* libintl.8.dylib in Embed Libraries */,
+				CEDA3A4E2253DD3B00C66A1B /* libgstreamer-1.0.0.dylib in Embed Libraries */,
+				CEDA3A542253DD3B00C66A1B /* libgstvideo-1.0.0.dylib in Embed Libraries */,
+				CEDA3A592253DD3B00C66A1B /* libjson-glib-1.0.0.dylib in Embed Libraries */,
+				CEDA3A5B2253DD3B00C66A1B /* libpixman-1.0.dylib in Embed Libraries */,
+				CEDA3A582253DD3B00C66A1B /* libjpeg.62.dylib in Embed Libraries */,
+				CEDA3A5A2253DD3B00C66A1B /* libopus.0.dylib in Embed Libraries */,
+				CEDA3A522253DD3B00C66A1B /* libgstsdp-1.0.0.dylib in Embed Libraries */,
+				CEDA3A462253DD3B00C66A1B /* libgstaudio-1.0.0.dylib in Embed Libraries */,
+				CEDA3A612253DD3B00C66A1B /* libturbojpeg.0.dylib in Embed Libraries */,
+				CEDA3A482253DD3B00C66A1B /* libgstcheck-1.0.0.dylib in Embed Libraries */,
+				CEDA3A562253DD3B00C66A1B /* libiconv.2.dylib in Embed Libraries */,
+				CEDA3A512253DD3B00C66A1B /* libgstrtsp-1.0.0.dylib in Embed Libraries */,
+				CEDA3A3E2253DD3B00C66A1B /* libgcrypt.20.dylib in Embed Libraries */,
+				CEDA3A4A2253DD3B00C66A1B /* libgstfft-1.0.0.dylib in Embed Libraries */,
+				CEDA3A4D2253DD3B00C66A1B /* libgstpbutils-1.0.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE1A4ACE1A0D1399002983C2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BE1A4ACF1A0D1399002983C2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BE21B5B21CBFE190001B401B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		BE21B5B41CBFE1BD001B401B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		BE3013441BD67BC100EE5B7D /* gst_ios_init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_init.h; sourceTree = "<group>"; };
+		BE3013451BD67BE900EE5B7D /* gst_ios_init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gst_ios_init.m; sourceTree = "<group>"; };
+		BE3013471BD6807000EE5B7D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BE3013491BD680A000EE5B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BE30134B1BD680A900EE5B7D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BE30134D1BD680AE00EE5B7D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BE30134F1BD680C900EE5B7D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BE3013511BD680FA00EE5B7D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BE3013551BD7873700EE5B7D /* flexvdi_ios_central2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flexvdi_ios_central2.png; sourceTree = "<group>"; };
+		BE3013571BD7907C00EE5B7D /* flexvdi_config_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flexvdi_config_logo.png; sourceTree = "<group>"; };
+		BE588B151A24EE4000ACED16 /* beep-timber.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beep-timber.aif"; sourceTree = "<group>"; };
+		BE5D39411A1233A7008C2094 /* config_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config_icon.png; sourceTree = "<group>"; };
+		BE5D39421A1233A7008C2094 /* flexvdi_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flexvdi_icon.png; sourceTree = "<group>"; };
+		BE5D394C1A1255D2008C2094 /* barra_sup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barra_sup.png; sourceTree = "<group>"; };
+		BE64382F1CBD096800742F1B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BE6438311CBD09BA00742F1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BE6438321CBD0CC500742F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BEA2334A1A0CC575007978B5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BEA2334B1A0CC575007978B5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BEA2F85F1A0BB94B00C2D8BF /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		BEA2F8601A0BB94B00C2D8BF /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		BEA2F8621A0BBB2600C2D8BF /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		BEA2F8631A0BBB2600C2D8BF /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		BEA2F8651A0BBB6A00C2D8BF /* flexConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flexConstants.h; sourceTree = "<group>"; };
+		BEA2F8661A0BBBF800C2D8BF /* DesktopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopTableViewCell.m; sourceTree = "<group>"; };
+		BEA2F8671A0BBBF800C2D8BF /* DesktopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopTableViewCell.h; sourceTree = "<group>"; };
+		BEA2F8EA1A0BCC9F00C2D8BF /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		BEA2F8EB1A0BCC9F00C2D8BF /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		BEAF3EC71A0A488F0056C6A8 /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
+		BEAF3EC91A0A6BB00056C6A8 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		BEAF3ECA1A0A6BB00056C6A8 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		BEE6190A1A13696800448F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BEFD10B61BD7A9ED00223664 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BEFD10B81BD7A9F700223664 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		CE9208392253E17E00F3880D /* libgstcoreelements.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstcoreelements.a; path = "build/sysroot/lib/gstreamer-1.0/libgstcoreelements.a"; sourceTree = "<group>"; };
+		CE92083A2253E17E00F3880D /* libgstosxaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstosxaudio.a; path = "build/sysroot/lib/gstreamer-1.0/libgstosxaudio.a"; sourceTree = "<group>"; };
+		CE92083B2253E17E00F3880D /* libgstvideoconvert.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvideoconvert.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvideoconvert.a"; sourceTree = "<group>"; };
+		CE92083C2253E17E00F3880D /* libgstvideorate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvideorate.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvideorate.a"; sourceTree = "<group>"; };
+		CE92083D2253E17E00F3880D /* libgstvideoscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvideoscale.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvideoscale.a"; sourceTree = "<group>"; };
+		CE92083E2253E17E00F3880D /* libgstvideofilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvideofilter.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvideofilter.a"; sourceTree = "<group>"; };
+		CE92083F2253E17E00F3880D /* libgsttypefindfunctions.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgsttypefindfunctions.a; path = "build/sysroot/lib/gstreamer-1.0/libgsttypefindfunctions.a"; sourceTree = "<group>"; };
+		CE9208402253E17E00F3880D /* libgstaudiotestsrc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstaudiotestsrc.a; path = "build/sysroot/lib/gstreamer-1.0/libgstaudiotestsrc.a"; sourceTree = "<group>"; };
+		CE9208412253E17E00F3880D /* libgstopengl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstopengl.a; path = "build/sysroot/lib/gstreamer-1.0/libgstopengl.a"; sourceTree = "<group>"; };
+		CE9208422253E17F00F3880D /* libgstapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstapp.a; path = "build/sysroot/lib/gstreamer-1.0/libgstapp.a"; sourceTree = "<group>"; };
+		CE9208432253E17F00F3880D /* libgstaudiorate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstaudiorate.a; path = "build/sysroot/lib/gstreamer-1.0/libgstaudiorate.a"; sourceTree = "<group>"; };
+		CE9208442253E17F00F3880D /* libgstvideotestsrc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvideotestsrc.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvideotestsrc.a"; sourceTree = "<group>"; };
+		CE9208452253E17F00F3880D /* libgstautodetect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstautodetect.a; path = "build/sysroot/lib/gstreamer-1.0/libgstautodetect.a"; sourceTree = "<group>"; };
+		CE9208462253E17F00F3880D /* libgstvolume.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstvolume.a; path = "build/sysroot/lib/gstreamer-1.0/libgstvolume.a"; sourceTree = "<group>"; };
+		CE9208472253E17F00F3880D /* libgstaudioresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstaudioresample.a; path = "build/sysroot/lib/gstreamer-1.0/libgstaudioresample.a"; sourceTree = "<group>"; };
+		CE9208482253E17F00F3880D /* libgstplayback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstplayback.a; path = "build/sysroot/lib/gstreamer-1.0/libgstplayback.a"; sourceTree = "<group>"; };
+		CE9208492253E17F00F3880D /* libgstaudioconvert.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstaudioconvert.a; path = "build/sysroot/lib/gstreamer-1.0/libgstaudioconvert.a"; sourceTree = "<group>"; };
+		CE92084A2253E17F00F3880D /* libgstadder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstadder.a; path = "build/sysroot/lib/gstreamer-1.0/libgstadder.a"; sourceTree = "<group>"; };
+		CE92084B2253E17F00F3880D /* libgstgio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstgio.a; path = "build/sysroot/lib/gstreamer-1.0/libgstgio.a"; sourceTree = "<group>"; };
+		CE92085F2253EFA400F3880D /* libgstjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgstjpeg.a; path = "build/sysroot/lib/gstreamer-1.0/libgstjpeg.a"; sourceTree = "<group>"; };
+		CEDA39ED2253D98600C66A1B /* libturbojpeg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.dylib; path = build/sysroot/lib/libturbojpeg.0.dylib; sourceTree = "<group>"; };
+		CEDA39EE2253D98600C66A1B /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = build/sysroot/lib/libpng16.16.dylib; sourceTree = "<group>"; };
+		CEDA39EF2253D98600C66A1B /* libgcrypt.20.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgcrypt.20.dylib; path = build/sysroot/lib/libgcrypt.20.dylib; sourceTree = "<group>"; };
+		CEDA39F02253D98600C66A1B /* libgstrtp-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstrtp-1.0.0.dylib"; path = "build/sysroot/lib/libgstrtp-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F12253D98600C66A1B /* libgio-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgio-2.0.0.dylib"; path = "build/sysroot/lib/libgio-2.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F22253D98600C66A1B /* libgthread-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgthread-2.0.0.dylib"; path = "build/sysroot/lib/libgthread-2.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F32253D98600C66A1B /* libintl.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libintl.8.dylib; path = build/sysroot/lib/libintl.8.dylib; sourceTree = "<group>"; };
+		CEDA39F42253D98600C66A1B /* libgstvideo-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstvideo-1.0.0.dylib"; path = "build/sysroot/lib/libgstvideo-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F52253D98600C66A1B /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = build/sysroot/lib/libssl.1.1.dylib; sourceTree = "<group>"; };
+		CEDA39F62253D98600C66A1B /* libglib-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libglib-2.0.0.dylib"; path = "build/sysroot/lib/libglib-2.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F72253D98600C66A1B /* libopus.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopus.0.dylib; path = build/sysroot/lib/libopus.0.dylib; sourceTree = "<group>"; };
+		CEDA39F82253D98600C66A1B /* libgpg-error.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgpg-error.0.dylib"; path = "build/sysroot/lib/libgpg-error.0.dylib"; sourceTree = "<group>"; };
+		CEDA39F92253D98600C66A1B /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = build/sysroot/lib/libcrypto.1.1.dylib; sourceTree = "<group>"; };
+		CEDA39FA2253D98700C66A1B /* libgstpbutils-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstpbutils-1.0.0.dylib"; path = "build/sysroot/lib/libgstpbutils-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39FB2253D98700C66A1B /* libspice-server.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libspice-server.1.dylib"; path = "build/sysroot/lib/libspice-server.1.dylib"; sourceTree = "<group>"; };
+		CEDA39FC2253D98700C66A1B /* libgstapp-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstapp-1.0.0.dylib"; path = "build/sysroot/lib/libgstapp-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA39FD2253D98700C66A1B /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = build/sysroot/lib/libiconv.2.dylib; sourceTree = "<group>"; };
+		CEDA39FE2253D98700C66A1B /* libspiceglue.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libspiceglue.0.dylib; path = build/sysroot/lib/libspiceglue.0.dylib; sourceTree = "<group>"; };
+		CEDA39FF2253D98700C66A1B /* libgstgl-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstgl-1.0.0.dylib"; path = "build/sysroot/lib/libgstgl-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A002253D98700C66A1B /* libffi.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.6.dylib; path = build/sysroot/lib/libffi.6.dylib; sourceTree = "<group>"; };
+		CEDA3A012253D98700C66A1B /* libgstrtsp-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstrtsp-1.0.0.dylib"; path = "build/sysroot/lib/libgstrtsp-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A022253D98700C66A1B /* libgstbase-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstbase-1.0.0.dylib"; path = "build/sysroot/lib/libgstbase-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A032253D98700C66A1B /* libjson-glib-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libjson-glib-1.0.0.dylib"; path = "build/sysroot/lib/libjson-glib-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A042253D98700C66A1B /* libgstcheck-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstcheck-1.0.0.dylib"; path = "build/sysroot/lib/libgstcheck-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A052253D98700C66A1B /* libgsttag-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgsttag-1.0.0.dylib"; path = "build/sysroot/lib/libgsttag-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A062253D98700C66A1B /* libgstriff-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstriff-1.0.0.dylib"; path = "build/sysroot/lib/libgstriff-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A072253D98700C66A1B /* libgobject-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgobject-2.0.0.dylib"; path = "build/sysroot/lib/libgobject-2.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A082253D98700C66A1B /* libgstcontroller-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstcontroller-1.0.0.dylib"; path = "build/sysroot/lib/libgstcontroller-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A092253D98700C66A1B /* libpixman-1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpixman-1.0.dylib"; path = "build/sysroot/lib/libpixman-1.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A0A2253D98700C66A1B /* libjpeg.62.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.62.dylib; path = build/sysroot/lib/libjpeg.62.dylib; sourceTree = "<group>"; };
+		CEDA3A0B2253D98700C66A1B /* libgstsdp-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstsdp-1.0.0.dylib"; path = "build/sysroot/lib/libgstsdp-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A0C2253D98700C66A1B /* libgstfft-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstfft-1.0.0.dylib"; path = "build/sysroot/lib/libgstfft-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A0D2253D98700C66A1B /* libgstaudio-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstaudio-1.0.0.dylib"; path = "build/sysroot/lib/libgstaudio-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A0E2253D98700C66A1B /* libgstnet-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstnet-1.0.0.dylib"; path = "build/sysroot/lib/libgstnet-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A0F2253D98700C66A1B /* libgmodule-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgmodule-2.0.0.dylib"; path = "build/sysroot/lib/libgmodule-2.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A102253D98700C66A1B /* libgstreamer-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstreamer-1.0.0.dylib"; path = "build/sysroot/lib/libgstreamer-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A112253D98700C66A1B /* libgstallocators-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgstallocators-1.0.0.dylib"; path = "build/sysroot/lib/libgstallocators-1.0.0.dylib"; sourceTree = "<group>"; };
+		CEDA3A122253D98800C66A1B /* libspice-client-glib-2.0.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libspice-client-glib-2.0.8.dylib"; path = "build/sysroot/lib/libspice-client-glib-2.0.8.dylib"; sourceTree = "<group>"; };
+		CEDA3A392253DB6400C66A1B /* UTM-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UTM-Info.plist"; sourceTree = "<group>"; };
+		CEDA3A3A2253DB6400C66A1B /* UTM-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UTM-Prefix.pch"; sourceTree = "<group>"; };
+		D8985D051A03D78200B240FF /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
+		D8985D081A03D82200B240FF /* ES1Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES1Renderer.h; sourceTree = "<group>"; };
+		D8985D091A03D82200B240FF /* ES1Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES1Renderer.m; sourceTree = "<group>"; };
+		D8FD562D1A03A77A00292158 /* UTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FD56301A03A77A00292158 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8FD56321A03A77A00292158 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8FD56341A03A77A00292158 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8FD56361A03A77A00292158 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		D8FD56381A03A77A00292158 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D8FD563E1A03A77A00292158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8FD56401A03A77A00292158 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8FD56431A03A77A00292158 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8FD56441A03A77A00292158 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8FD56471A03A77A00292158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		D8FD56501A03A77A00292158 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		D8FD56511A03A77A00292158 /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		D8FD56531A03A77A00292158 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D8FD56621A03A77A00292158 /* iOSLauncherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSLauncherTests-Info.plist"; sourceTree = "<group>"; };
+		D8FD56641A03A77A00292158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8FD56661A03A77A00292158 /* iOSLauncherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSLauncherTests.m; sourceTree = "<group>"; };
+		D8FD56721A03A8BD00292158 /* draw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = draw.c; sourceTree = "<group>"; };
+		D8FD56731A03A8BD00292158 /* draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = draw.h; sourceTree = "<group>"; };
+		D8FD56741A03A8BD00292158 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		D8FD56751A03A8BD00292158 /* io_interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_interface.c; sourceTree = "<group>"; };
+		D8FD56761A03A8BD00292158 /* io_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io_interface.h; sourceTree = "<group>"; };
+		D8FD56771A03A8BD00292158 /* native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = native.h; sourceTree = "<group>"; };
+		D8FD56781A03A8BD00292158 /* spice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spice.c; sourceTree = "<group>"; };
+		D8FD56791A03A8BD00292158 /* spice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spice.h; sourceTree = "<group>"; };
+		D8FD567D1A03B05200292158 /* spice-mono-glue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "spice-mono-glue.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8FD562A1A03A77A00292158 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9208602253EFA400F3880D /* libgstjpeg.a in Frameworks */,
+				CE92084C2253E17F00F3880D /* libgstcoreelements.a in Frameworks */,
+				CE92084D2253E17F00F3880D /* libgstosxaudio.a in Frameworks */,
+				CE92084E2253E17F00F3880D /* libgstvideoconvert.a in Frameworks */,
+				CE92084F2253E17F00F3880D /* libgstvideorate.a in Frameworks */,
+				CE9208502253E17F00F3880D /* libgstvideoscale.a in Frameworks */,
+				CE9208512253E17F00F3880D /* libgstvideofilter.a in Frameworks */,
+				CE9208522253E17F00F3880D /* libgsttypefindfunctions.a in Frameworks */,
+				CE9208532253E17F00F3880D /* libgstaudiotestsrc.a in Frameworks */,
+				CE9208542253E17F00F3880D /* libgstopengl.a in Frameworks */,
+				CE9208552253E17F00F3880D /* libgstapp.a in Frameworks */,
+				CE9208562253E17F00F3880D /* libgstaudiorate.a in Frameworks */,
+				CE9208572253E17F00F3880D /* libgstvideotestsrc.a in Frameworks */,
+				CE9208582253E17F00F3880D /* libgstautodetect.a in Frameworks */,
+				CE9208592253E17F00F3880D /* libgstvolume.a in Frameworks */,
+				CE92085A2253E17F00F3880D /* libgstaudioresample.a in Frameworks */,
+				CE92085B2253E17F00F3880D /* libgstplayback.a in Frameworks */,
+				CE92085C2253E17F00F3880D /* libgstaudioconvert.a in Frameworks */,
+				CE92085D2253E17F00F3880D /* libgstadder.a in Frameworks */,
+				CE92085E2253E17F00F3880D /* libgstgio.a in Frameworks */,
+				CEDA3A132253D98800C66A1B /* libturbojpeg.0.dylib in Frameworks */,
+				CEDA3A142253D98800C66A1B /* libpng16.16.dylib in Frameworks */,
+				CEDA3A152253D98800C66A1B /* libgcrypt.20.dylib in Frameworks */,
+				CEDA3A162253D98800C66A1B /* libgstrtp-1.0.0.dylib in Frameworks */,
+				CEDA3A172253D98800C66A1B /* libgio-2.0.0.dylib in Frameworks */,
+				CEDA3A182253D98800C66A1B /* libgthread-2.0.0.dylib in Frameworks */,
+				CEDA3A192253D98800C66A1B /* libintl.8.dylib in Frameworks */,
+				CEDA3A1A2253D98800C66A1B /* libgstvideo-1.0.0.dylib in Frameworks */,
+				CEDA3A1B2253D98800C66A1B /* libssl.1.1.dylib in Frameworks */,
+				CEDA3A1C2253D98800C66A1B /* libglib-2.0.0.dylib in Frameworks */,
+				CEDA3A1D2253D98800C66A1B /* libopus.0.dylib in Frameworks */,
+				CEDA3A1E2253D98800C66A1B /* libgpg-error.0.dylib in Frameworks */,
+				CEDA3A1F2253D98800C66A1B /* libcrypto.1.1.dylib in Frameworks */,
+				CEDA3A202253D98800C66A1B /* libgstpbutils-1.0.0.dylib in Frameworks */,
+				CEDA3A212253D98800C66A1B /* libspice-server.1.dylib in Frameworks */,
+				CEDA3A222253D98800C66A1B /* libgstapp-1.0.0.dylib in Frameworks */,
+				CEDA3A232253D98800C66A1B /* libiconv.2.dylib in Frameworks */,
+				CEDA3A242253D98800C66A1B /* libspiceglue.0.dylib in Frameworks */,
+				CEDA3A252253D98800C66A1B /* libgstgl-1.0.0.dylib in Frameworks */,
+				CEDA3A262253D98800C66A1B /* libffi.6.dylib in Frameworks */,
+				CEDA3A272253D98800C66A1B /* libgstrtsp-1.0.0.dylib in Frameworks */,
+				CEDA3A282253D98800C66A1B /* libgstbase-1.0.0.dylib in Frameworks */,
+				CEDA3A292253D98800C66A1B /* libjson-glib-1.0.0.dylib in Frameworks */,
+				CEDA3A2A2253D98800C66A1B /* libgstcheck-1.0.0.dylib in Frameworks */,
+				CEDA3A2B2253D98800C66A1B /* libgsttag-1.0.0.dylib in Frameworks */,
+				CEDA3A2C2253D98800C66A1B /* libgstriff-1.0.0.dylib in Frameworks */,
+				CEDA3A2D2253D98800C66A1B /* libgobject-2.0.0.dylib in Frameworks */,
+				CEDA3A2E2253D98800C66A1B /* libgstcontroller-1.0.0.dylib in Frameworks */,
+				CEDA3A2F2253D98800C66A1B /* libpixman-1.0.dylib in Frameworks */,
+				CEDA3A302253D98800C66A1B /* libjpeg.62.dylib in Frameworks */,
+				CEDA3A312253D98800C66A1B /* libgstsdp-1.0.0.dylib in Frameworks */,
+				CEDA3A322253D98800C66A1B /* libgstfft-1.0.0.dylib in Frameworks */,
+				CEDA3A332253D98800C66A1B /* libgstaudio-1.0.0.dylib in Frameworks */,
+				CEDA3A342253D98800C66A1B /* libgstnet-1.0.0.dylib in Frameworks */,
+				CEDA3A352253D98800C66A1B /* libgmodule-2.0.0.dylib in Frameworks */,
+				CEDA3A362253D98800C66A1B /* libgstreamer-1.0.0.dylib in Frameworks */,
+				CEDA3A372253D98800C66A1B /* libgstallocators-1.0.0.dylib in Frameworks */,
+				CEDA3A382253D98800C66A1B /* libspice-client-glib-2.0.8.dylib in Frameworks */,
+				BEFD10BD1BD7C9E100223664 /* AssetsLibrary.framework in Frameworks */,
+				BEFD10BC1BD7C9D500223664 /* AVFoundation.framework in Frameworks */,
+				BEFD10BB1BD7C9BD00223664 /* CoreMedia.framework in Frameworks */,
+				BEFD10BA1BD7C9B000223664 /* VideoToolbox.framework in Frameworks */,
+				D8FD56391A03A77A00292158 /* OpenGLES.framework in Frameworks */,
+				D8FD56331A03A77A00292158 /* CoreGraphics.framework in Frameworks */,
+				D8FD56351A03A77A00292158 /* UIKit.framework in Frameworks */,
+				D8FD56371A03A77A00292158 /* GLKit.framework in Frameworks */,
+				D8FD56311A03A77A00292158 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEAF3EC61A0A47B00056C6A8 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				BE3013571BD7907C00EE5B7D /* flexvdi_config_logo.png */,
+				BE3013551BD7873700EE5B7D /* flexvdi_ios_central2.png */,
+				BE588B151A24EE4000ACED16 /* beep-timber.aif */,
+				BE5D394C1A1255D2008C2094 /* barra_sup.png */,
+				BE5D39411A1233A7008C2094 /* config_icon.png */,
+				BE5D39421A1233A7008C2094 /* flexvdi_icon.png */,
+				BEAF3EC71A0A488F0056C6A8 /* keyboard.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		D8FD56241A03A77A00292158 = {
+			isa = PBXGroup;
+			children = (
+				BEAF3EC61A0A47B00056C6A8 /* res */,
+				D8FD56711A03A7D200292158 /* src */,
+				D8FD563A1A03A77A00292158 /* iOSLauncher */,
+				D8FD56601A03A77A00292158 /* iOSLauncherTests */,
+				D8FD562F1A03A77A00292158 /* Frameworks */,
+				D8FD562E1A03A77A00292158 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8FD562E1A03A77A00292158 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8FD562D1A03A77A00292158 /* UTM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8FD562F1A03A77A00292158 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE92085F2253EFA400F3880D /* libgstjpeg.a */,
+				CE92084A2253E17F00F3880D /* libgstadder.a */,
+				CE9208422253E17F00F3880D /* libgstapp.a */,
+				CE9208492253E17F00F3880D /* libgstaudioconvert.a */,
+				CE9208432253E17F00F3880D /* libgstaudiorate.a */,
+				CE9208472253E17F00F3880D /* libgstaudioresample.a */,
+				CE9208402253E17E00F3880D /* libgstaudiotestsrc.a */,
+				CE9208452253E17F00F3880D /* libgstautodetect.a */,
+				CE9208392253E17E00F3880D /* libgstcoreelements.a */,
+				CE92084B2253E17F00F3880D /* libgstgio.a */,
+				CE9208412253E17E00F3880D /* libgstopengl.a */,
+				CE92083A2253E17E00F3880D /* libgstosxaudio.a */,
+				CE9208482253E17F00F3880D /* libgstplayback.a */,
+				CE92083F2253E17E00F3880D /* libgsttypefindfunctions.a */,
+				CE92083B2253E17E00F3880D /* libgstvideoconvert.a */,
+				CE92083E2253E17E00F3880D /* libgstvideofilter.a */,
+				CE92083C2253E17E00F3880D /* libgstvideorate.a */,
+				CE92083D2253E17E00F3880D /* libgstvideoscale.a */,
+				CE9208442253E17F00F3880D /* libgstvideotestsrc.a */,
+				CE9208462253E17F00F3880D /* libgstvolume.a */,
+				CEDA39F92253D98600C66A1B /* libcrypto.1.1.dylib */,
+				CEDA3A002253D98700C66A1B /* libffi.6.dylib */,
+				CEDA39EF2253D98600C66A1B /* libgcrypt.20.dylib */,
+				CEDA39F12253D98600C66A1B /* libgio-2.0.0.dylib */,
+				CEDA39F62253D98600C66A1B /* libglib-2.0.0.dylib */,
+				CEDA3A0F2253D98700C66A1B /* libgmodule-2.0.0.dylib */,
+				CEDA3A072253D98700C66A1B /* libgobject-2.0.0.dylib */,
+				CEDA39F82253D98600C66A1B /* libgpg-error.0.dylib */,
+				CEDA3A112253D98700C66A1B /* libgstallocators-1.0.0.dylib */,
+				CEDA39FC2253D98700C66A1B /* libgstapp-1.0.0.dylib */,
+				CEDA3A0D2253D98700C66A1B /* libgstaudio-1.0.0.dylib */,
+				CEDA3A022253D98700C66A1B /* libgstbase-1.0.0.dylib */,
+				CEDA3A042253D98700C66A1B /* libgstcheck-1.0.0.dylib */,
+				CEDA3A082253D98700C66A1B /* libgstcontroller-1.0.0.dylib */,
+				CEDA3A0C2253D98700C66A1B /* libgstfft-1.0.0.dylib */,
+				CEDA39FF2253D98700C66A1B /* libgstgl-1.0.0.dylib */,
+				CEDA3A0E2253D98700C66A1B /* libgstnet-1.0.0.dylib */,
+				CEDA39FA2253D98700C66A1B /* libgstpbutils-1.0.0.dylib */,
+				CEDA3A102253D98700C66A1B /* libgstreamer-1.0.0.dylib */,
+				CEDA3A062253D98700C66A1B /* libgstriff-1.0.0.dylib */,
+				CEDA39F02253D98600C66A1B /* libgstrtp-1.0.0.dylib */,
+				CEDA3A012253D98700C66A1B /* libgstrtsp-1.0.0.dylib */,
+				CEDA3A0B2253D98700C66A1B /* libgstsdp-1.0.0.dylib */,
+				CEDA3A052253D98700C66A1B /* libgsttag-1.0.0.dylib */,
+				CEDA39F42253D98600C66A1B /* libgstvideo-1.0.0.dylib */,
+				CEDA39F22253D98600C66A1B /* libgthread-2.0.0.dylib */,
+				CEDA39FD2253D98700C66A1B /* libiconv.2.dylib */,
+				CEDA39F32253D98600C66A1B /* libintl.8.dylib */,
+				CEDA3A0A2253D98700C66A1B /* libjpeg.62.dylib */,
+				CEDA3A032253D98700C66A1B /* libjson-glib-1.0.0.dylib */,
+				CEDA39F72253D98600C66A1B /* libopus.0.dylib */,
+				CEDA3A092253D98700C66A1B /* libpixman-1.0.dylib */,
+				CEDA39EE2253D98600C66A1B /* libpng16.16.dylib */,
+				CEDA3A122253D98800C66A1B /* libspice-client-glib-2.0.8.dylib */,
+				CEDA39FB2253D98700C66A1B /* libspice-server.1.dylib */,
+				CEDA39FE2253D98700C66A1B /* libspiceglue.0.dylib */,
+				CEDA39F52253D98600C66A1B /* libssl.1.1.dylib */,
+				CEDA39ED2253D98600C66A1B /* libturbojpeg.0.dylib */,
+				BEFD10B81BD7A9F700223664 /* AssetsLibrary.framework */,
+				BEFD10B61BD7A9ED00223664 /* AdSupport.framework */,
+				BE3013511BD680FA00EE5B7D /* VideoToolbox.framework */,
+				BE30134F1BD680C900EE5B7D /* AudioToolbox.framework */,
+				BE30134D1BD680AE00EE5B7D /* CoreVideo.framework */,
+				BE30134B1BD680A900EE5B7D /* CoreAudio.framework */,
+				BE3013491BD680A000EE5B7D /* AVFoundation.framework */,
+				BE3013471BD6807000EE5B7D /* CoreMedia.framework */,
+				D8FD56301A03A77A00292158 /* Foundation.framework */,
+				D8FD56321A03A77A00292158 /* CoreGraphics.framework */,
+				D8FD56341A03A77A00292158 /* UIKit.framework */,
+				D8FD56361A03A77A00292158 /* GLKit.framework */,
+				D8FD56381A03A77A00292158 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8FD563A1A03A77A00292158 /* iOSLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				BE1A4ACE1A0D1399002983C2 /* Reachability.h */,
+				BE1A4ACF1A0D1399002983C2 /* Reachability.m */,
+				BEA2F8EA1A0BCC9F00C2D8BF /* ConfigViewController.h */,
+				BEA2F8EB1A0BCC9F00C2D8BF /* ConfigViewController.m */,
+				BEA2F8621A0BBB2600C2D8BF /* Toast+UIView.h */,
+				BEA2F8661A0BBBF800C2D8BF /* DesktopTableViewCell.m */,
+				BEA2F8671A0BBBF800C2D8BF /* DesktopTableViewCell.h */,
+				BEA2F8631A0BBB2600C2D8BF /* Toast+UIView.m */,
+				D8FD56431A03A77A00292158 /* AppDelegate.h */,
+				D8FD56441A03A77A00292158 /* AppDelegate.m */,
+				D8FD56461A03A77A00292158 /* Main_iPhone.storyboard */,
+				BEE619091A13696800448F71 /* Main_iPad.storyboard */,
+				D8FD56501A03A77A00292158 /* MainView.h */,
+				D8FD56511A03A77A00292158 /* MainView.m */,
+				D8FD56531A03A77A00292158 /* Images.xcassets */,
+				D8FD563B1A03A77A00292158 /* Supporting Files */,
+				D8985D051A03D78200B240FF /* ESRenderer.h */,
+				D8985D081A03D82200B240FF /* ES1Renderer.h */,
+				D8985D091A03D82200B240FF /* ES1Renderer.m */,
+				BEAF3EC91A0A6BB00056C6A8 /* KeyboardView.h */,
+				BEAF3ECA1A0A6BB00056C6A8 /* KeyboardView.m */,
+				BEA2F85F1A0BB94B00C2D8BF /* LoginController.h */,
+				BEA2F8601A0BB94B00C2D8BF /* LoginController.m */,
+				BEA2F8651A0BBB6A00C2D8BF /* flexConstants.h */,
+				BEA2334A1A0CC575007978B5 /* MainViewController.h */,
+				BEA2334B1A0CC575007978B5 /* MainViewController.m */,
+				BE3013441BD67BC100EE5B7D /* gst_ios_init.h */,
+				BE3013451BD67BE900EE5B7D /* gst_ios_init.m */,
+			);
+			path = iOSLauncher;
+			sourceTree = "<group>";
+		};
+		D8FD563B1A03A77A00292158 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA3A392253DB6400C66A1B /* UTM-Info.plist */,
+				CEDA3A3A2253DB6400C66A1B /* UTM-Prefix.pch */,
+				D8FD563D1A03A77A00292158 /* InfoPlist.strings */,
+				D8FD56401A03A77A00292158 /* main.m */,
+				BE6438301CBD096800742F1B /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8FD56601A03A77A00292158 /* iOSLauncherTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8FD56661A03A77A00292158 /* iOSLauncherTests.m */,
+				D8FD56611A03A77A00292158 /* Supporting Files */,
+			);
+			path = iOSLauncherTests;
+			sourceTree = "<group>";
+		};
+		D8FD56611A03A77A00292158 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8FD56621A03A77A00292158 /* iOSLauncherTests-Info.plist */,
+				D8FD56631A03A77A00292158 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8FD56711A03A7D200292158 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D8FD567D1A03B05200292158 /* spice-mono-glue.h */,
+				D8FD56721A03A8BD00292158 /* draw.c */,
+				D8FD56731A03A8BD00292158 /* draw.h */,
+				D8FD56741A03A8BD00292158 /* globals.h */,
+				D8FD56751A03A8BD00292158 /* io_interface.c */,
+				D8FD56761A03A8BD00292158 /* io_interface.h */,
+				D8FD56771A03A8BD00292158 /* native.h */,
+				D8FD56781A03A8BD00292158 /* spice.c */,
+				D8FD56791A03A8BD00292158 /* spice.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8FD562C1A03A77A00292158 /* UTM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8FD566A1A03A77A00292158 /* Build configuration list for PBXNativeTarget "UTM" */;
+			buildPhases = (
+				D8FD56291A03A77A00292158 /* Sources */,
+				D8FD562A1A03A77A00292158 /* Frameworks */,
+				D8FD562B1A03A77A00292158 /* Resources */,
+				CEDA3A622253DD3B00C66A1B /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UTM;
+			productName = iOSLauncher;
+			productReference = D8FD562D1A03A77A00292158 /* UTM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8FD56251A03A77A00292158 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Halts;
+			};
+			buildConfigurationList = D8FD56281A03A77A00292158 /* Build configuration list for PBXProject "UTM" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = D8FD56241A03A77A00292158;
+			productRefGroup = D8FD562E1A03A77A00292158 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8FD562C1A03A77A00292158 /* UTM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8FD562B1A03A77A00292158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5D39451A1233A7008C2094 /* flexvdi_icon.png in Resources */,
+				BEAF3EC81A0A488F0056C6A8 /* keyboard.png in Resources */,
+				D8FD56481A03A77A00292158 /* Main_iPhone.storyboard in Resources */,
+				BE588B161A24EE4000ACED16 /* beep-timber.aif in Resources */,
+				BEE6190B1A13696800448F71 /* Main_iPad.storyboard in Resources */,
+				D8FD56541A03A77A00292158 /* Images.xcassets in Resources */,
+				BE3013561BD7873700EE5B7D /* flexvdi_ios_central2.png in Resources */,
+				BE3013581BD7907C00EE5B7D /* flexvdi_config_logo.png in Resources */,
+				D8FD563F1A03A77A00292158 /* InfoPlist.strings in Resources */,
+				BE5D394D1A1255D2008C2094 /* barra_sup.png in Resources */,
+				BE64382E1CBD096800742F1B /* Localizable.strings in Resources */,
+				BE5D39441A1233A7008C2094 /* config_icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8FD56291A03A77A00292158 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FD567C1A03A8BD00292158 /* spice.c in Sources */,
+				BEA2F8681A0BBBF800C2D8BF /* DesktopTableViewCell.m in Sources */,
+				D8FD56521A03A77A00292158 /* MainView.m in Sources */,
+				D8FD567A1A03A8BD00292158 /* draw.c in Sources */,
+				BEA2334C1A0CC575007978B5 /* MainViewController.m in Sources */,
+				D8FD56451A03A77A00292158 /* AppDelegate.m in Sources */,
+				D8FD567B1A03A8BD00292158 /* io_interface.c in Sources */,
+				BEAF3ECB1A0A6BB00056C6A8 /* KeyboardView.m in Sources */,
+				BEA2F8641A0BBB2600C2D8BF /* Toast+UIView.m in Sources */,
+				D8985D0A1A03D82200B240FF /* ES1Renderer.m in Sources */,
+				BE1A4AD01A0D1399002983C2 /* Reachability.m in Sources */,
+				D8FD56411A03A77A00292158 /* main.m in Sources */,
+				BEA2F8EC1A0BCC9F00C2D8BF /* ConfigViewController.m in Sources */,
+				BEA2F8611A0BB94B00C2D8BF /* LoginController.m in Sources */,
+				BE3013461BD67BE900EE5B7D /* gst_ios_init.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE6438301CBD096800742F1B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE64382F1CBD096800742F1B /* es */,
+				BE6438311CBD09BA00742F1B /* en */,
+				BE6438321CBD0CC500742F1B /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BEE619091A13696800448F71 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEE6190A1A13696800448F71 /* Base */,
+				BE21B5B21CBFE190001B401B /* es */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D8FD563D1A03A77A00292158 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8FD563E1A03A77A00292158 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8FD56461A03A77A00292158 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8FD56471A03A77A00292158 /* Base */,
+				BE21B5B41CBFE1BD001B401B /* es */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D8FD56631A03A77A00292158 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8FD56641A03A77A00292158 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8FD56681A03A77A00292158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8FD56691A03A77A00292158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8FD566B1A03A77A00292158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DYLIB_COMPATIBILITY_VERSION[sdk=*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLauncher/UTM-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/sysroot/include",
+					"$(PROJECT_DIR)/build/sysroot/include/gstreamer-1.0",
+					"$(PROJECT_DIR)/build/sysroot/include/glib-2.0",
+					"$(PROJECT_DIR)/build/sysroot/lib/glib-2.0/include",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/iOSLauncher/UTM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/sysroot/lib",
+					"$(PROJECT_DIR)/build/sysroot/lib/gstreamer-1.0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.halts.UTM;
+				PRODUCT_NAME = UTM;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
+				VALID_ARCHS = arm64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8FD566C1A03A77A00292158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLauncher/UTM-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/sysroot/include",
+					"$(PROJECT_DIR)/build/sysroot/include/gstreamer-1.0",
+					"$(PROJECT_DIR)/build/sysroot/include/glib-2.0",
+					"$(PROJECT_DIR)/build/sysroot/lib/glib-2.0/include",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/iOSLauncher/UTM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/sysroot/lib",
+					"$(PROJECT_DIR)/build/sysroot/lib/gstreamer-1.0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.halts.UTM;
+				PRODUCT_NAME = UTM;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
+				VALID_ARCHS = arm64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8FD56281A03A77A00292158 /* Build configuration list for PBXProject "UTM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8FD56681A03A77A00292158 /* Debug */,
+				D8FD56691A03A77A00292158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8FD566A1A03A77A00292158 /* Build configuration list for PBXNativeTarget "UTM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8FD566B1A03A77A00292158 /* Debug */,
+				D8FD566C1A03A77A00292158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8FD56251A03A77A00292158 /* Project object */;
+}
