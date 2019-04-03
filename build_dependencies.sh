@@ -244,18 +244,16 @@ build_spice_client () {
 
 fixup () {
     FILE=$1
-    LIST=$(otool -L "$FILE" | grep "$PREFIX" | cut -d ' ' -f 1 | awk '{$1=$1};1')
+    LIST=$(otool -L "$FILE" | tail -n +3 | cut -d ' ' -f 1 | awk '{$1=$1};1')
     OLDIFS=$IFS
     IFS=$'\n'
     echo "${GREEN}Fixing up $FILE...${NC}"
-    first=1
+    install_name_tool -id "@rpath/$(basename "$FILE")" "$FILE"
     for f in $LIST
     do
         base=$(basename "$f")
-        if [ $first -eq 1 ]; then
-            first=0
-            install_name_tool -id "@rpath/$base" "$FILE"
-        else
+        dir=$(dirname "$f")
+        if [ "$dir" == "$PREFIX/lib" ]; then
             install_name_tool -change "$f" "@rpath/$base" "$FILE"
         fi
     done
